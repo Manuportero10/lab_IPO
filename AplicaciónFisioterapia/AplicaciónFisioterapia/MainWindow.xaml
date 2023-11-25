@@ -1,0 +1,61 @@
+﻿<Window x:Class="AplicaciónFisioterapia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplicaciónFisioterapia"
+        mc:Ignorable="d"
+        Title="Iniciar Sesión" Height="381" Width="366">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="197*"/>
+            <ColumnDefinition Width="98*"/>
+            <ColumnDefinition Width="22*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="74*"/>
+            <RowDefinition Height="37*"/>
+        </Grid.RowDefinitions>
+
+        <Image x:Name="corazon" Source="/Juan.png" />
+        
+        <Label Grid.Column="1" Content="Introduzca sus credenciales:" FontWeight="Bold" FontStyle="Italic"
+               x:Name="lbl_inicio_sesion"/>
+
+        <Label Grid.Row="2" Grid.Column="1" Content="Usuario:" FontWeight="Bold" Margin="0,8,0,28" Grid.RowSpan="2"  />
+
+        <TextBox Grid.Row="3" Grid.Column="1" BorderBrush="Black" VerticalAlignment="Center" Height="18"    
+                 />
+
+        <Label Grid.Row="5" Grid.Column="1" Content="Contraseña:" FontWeight="Bold"  />
+        <TextBox Grid.Row="6" Grid.Column="1" BorderBrush="Black" VerticalAlignment="Center" Height="18"/>
+ 
+
+        <TextBlock x:Name="lbl_olvidar_contasena" Grid.Row="6" Grid.Column="1" 
+                   Text="¿Has olvidado tu contraseña?"
+                   Foreground="#339CFF"
+                   TextDecorations="Underline" Margin="0,28,0,74" Grid.RowSpan="3"
+                   >
+        </TextBlock>
+
+        <Button Grid.Row="8" Grid.Column="2" VerticalAlignment="Center" Width="50" Height="50"> 
+            <Image Name="imgFelchaNormal" Source="img\Fnormal.png" Width="50" Height="50">
+                </Image>
+        </Button>  
+            
+        
+
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,30 @@
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\bin\Debug\AplicaciónFisioterapia.exe.config
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\bin\Debug\AplicaciónFisioterapia.exe
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\bin\Debug\AplicaciónFisioterapia.pdb
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.csproj.AssemblyReference.cache
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\MainWindow.g.cs
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\App.g.cs
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia_MarkupCompile.cache
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia_MarkupCompile.lref
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\MainWindow.baml
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.g.resources
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.Properties.Resources.resources
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.csproj.GenerateResource.cache
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.csproj.CoreCompileInputs.cache
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.exe
+C:\Users\manup\OneDrive\Escritorio\Ingenieria Informatica\Segundo curso\S2\Base de datos\Laboratorio\Practica3\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.pdb
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.csproj.AssemblyReference.cache
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\MainWindow.g.cs
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\App.g.cs
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia_MarkupCompile.cache
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia_MarkupCompile.lref
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.exe
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.pdb
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\bin\Debug\AplicaciónFisioterapia.exe.config
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\bin\Debug\AplicaciónFisioterapia.exe
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\bin\Debug\AplicaciónFisioterapia.pdb
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\MainWindow.baml
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.g.resources
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.Properties.Resources.resources
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.csproj.GenerateResource.cache
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.csproj.CoreCompileInputs.cache
