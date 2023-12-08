@@ -26,19 +26,19 @@
             <RowDefinition Height="37*"/>
         </Grid.RowDefinitions>
 
-        <Image x:Name="corazon" Source="/Juan.png" />
-        
+
+
         <Label Grid.Column="1" Content="Introduzca sus credenciales:" FontWeight="Bold" FontStyle="Italic"
                x:Name="lbl_inicio_sesion"/>
 
         <Label Grid.Row="2" Grid.Column="1" Content="Usuario:" FontWeight="Bold" Margin="0,8,0,28" Grid.RowSpan="2"  />
 
-        <TextBox Grid.Row="3" Grid.Column="1" BorderBrush="Black" VerticalAlignment="Center" Height="18"    
+        <TextBox x:Name="txtUsuario" Grid.Row="3" Grid.Column="1" BorderBrush="Black" VerticalAlignment="Center" Height="18" KeyDown="txtUsuario_keyDown"    
                  />
 
         <Label Grid.Row="5" Grid.Column="1" Content="Contraseña:" FontWeight="Bold"  />
-        <TextBox Grid.Row="6" Grid.Column="1" BorderBrush="Black" VerticalAlignment="Center" Height="18"/>
- 
+        <PasswordBox x:Name="passContrasena" Grid.Row="6" Grid.Column="1" BorderBrush="Black" VerticalAlignment="Center" Height="18" KeyUp="passContrasena_KeyUp"/>
+
 
         <TextBlock x:Name="lbl_olvidar_contasena" Grid.Row="6" Grid.Column="1" 
                    Text="¿Has olvidado tu contraseña?"
@@ -47,12 +47,21 @@
                    >
         </TextBlock>
 
-        <Button Grid.Row="8" Grid.Column="2" VerticalAlignment="Center" Width="50" Height="50"> 
-            <Image Name="imgFelchaNormal" Source="img\Fnormal.png" Width="50" Height="50">
+        <Button x:Name="btnLogin" Grid.Row="8" Grid.Column="2" 
+                VerticalAlignment="Center" Height="45"
+                ToolTip="Pulsar para iniciar sesión" Click="btnLogin_Click" Margin="25,0,16,0">
+            <StackPanel Height="50" Width="54">
+                <Image x:Name="imgLogin" Source="/img/Fnormal.png" Height="auto" Width="auto">
+
                 </Image>
-        </Button>  
-            
-        
+            </StackPanel>
+        </Button>
+
+        <Image Grid.ColumnSpan="1" Grid.RowSpan="1" Width="auto" Source="img/Juan.png"/>
+        <Image x:Name="imgCheckUsuario" Grid.Column="2" HorizontalAlignment="Left" Height="20" Grid.Row="3" VerticalAlignment="Top" Width="20" Margin="10,4,0,0"/>
+        <Image x:Name="imgCheckContrasena" Grid.Column="2" HorizontalAlignment="Left" Height="20" Grid.RowSpan="2" Grid.Row="5" VerticalAlignment="Top" Width="20" Margin="10,27,0,0"/>
+
+
 
 
 

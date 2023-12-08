@@ -24,12 +24,80 @@ namespace AplicaciónFisioterapia
     public partial class MainWindow : Window
     {
         
-        //private BitmapImage corazon = new BitmapImage(new Uri("/Juan.png",UriKind.Relative));
+        private MenuPrincipal menu_principal;
+        private BitmapImage imagCheck = new BitmapImage(new Uri("img/check_verde.png", UriKind.Relative));
+        private BitmapImage imagCross = new BitmapImage(new Uri("img/cross.png", UriKind.Relative));
+        private BitmapImage imgFazul = new BitmapImage(new Uri("img/Fazul.png", UriKind.Relative));
+        private BitmapImage imgFnormal = new BitmapImage(new Uri("img/Fnormal.png", UriKind.Relative));
+        private String usuario = "Martinez";
+        private String password = "1234";
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            menu_principal = new MenuPrincipal();
+            menu_principal.Show();
+            this.Visibility = Visibility.Hidden;
+        }
 
+        private void txtUsuario_keyDown(object sender, KeyEventArgs e)
+        {
+            // se hará la comprobación al pulsar el "Enter"
+            if (e.Key == Key.Return)
+            {
+                if (ComprobarEntrada(txtUsuario.Text, usuario,
+                txtUsuario, imgCheckUsuario))
+                {
+                    // habilitar entrada de contraseña y pasarle el foco
+                    passContrasena.IsEnabled = true;
+                    passContrasena.Focus();
+                    // deshabilitar entrada de login
+                    txtUsuario.IsEnabled = false;
+                }
+            }
+        }
+
+        private Boolean ComprobarEntrada(string valorIntroducido, string valorValido,
+                Control componenteEntrada, Image imagenFeedBack)
+        {
+            Boolean valido = false;
+            if (valorIntroducido.Equals(valorValido))
+            {
+                // borde y background en verde
+                componenteEntrada.BorderBrush = Brushes.Green;
+                componenteEntrada.Background = Brushes.LightGreen;
+                // imagen al lado de la entrada de usuario --> check
+                imagenFeedBack.Source = imagCheck;
+                valido = true;
+            }
+            else
+            {
+                // marcamos borde en rojo
+                componenteEntrada.BorderBrush = Brushes.Red;
+                componenteEntrada.Background = Brushes.LightCoral;
+                // imagen al lado de la entrada de usuario --> cross
+                imagenFeedBack.Source = imagCross;
+                valido = false;
+            }
+            return valido;
+        }
+
+        private void passContrasena_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (ComprobarEntrada(passContrasena.Password, password,
+                        passContrasena, imgCheckContrasena))
+            {
+                btnLogin.Focus();
+                imgLogin.Source = imgFazul;
+            }
+            else
+            {
+                imgLogin.Source = imgFnormal;
+            }
+
+        }
     }
 }

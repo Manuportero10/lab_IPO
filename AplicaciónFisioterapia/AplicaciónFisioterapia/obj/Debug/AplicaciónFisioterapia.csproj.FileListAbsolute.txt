@@ -28,3 +28,5 @@ C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\Aplicaci�
 C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.Properties.Resources.resources
 C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.csproj.GenerateResource.cache
 C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.csproj.CoreCompileInputs.cache
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\MenuPrincipal.g.cs
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\MenuPrincipal.baml
