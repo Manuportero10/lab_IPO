@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplicaciónFisioterapia"
         mc:Ignorable="d"
-        Title="Iniciar Sesión" Height="381" Width="366">
+        Title="Iniciar Sesión" Height="381" Width="366" Closing="MainWindow_closing">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="49*"/>
@@ -37,7 +37,7 @@
                  />
 
         <Label Grid.Row="5" Grid.Column="1" Content="Contraseña:" FontWeight="Bold"  />
-        <PasswordBox x:Name="passContrasena" Grid.Row="6" Grid.Column="1" BorderBrush="Black" VerticalAlignment="Center" Height="18" KeyUp="passContrasena_KeyUp"/>
+        <PasswordBox x:Name="passContrasena" Grid.Row="6" Grid.Column="1" BorderBrush="Black" VerticalAlignment="Center" Height="18" IsEnabled="False" KeyUp="passContrasena_KeyUp"/>
 
 
         <TextBlock x:Name="lbl_olvidar_contasena" Grid.Row="6" Grid.Column="1" 
@@ -48,7 +48,7 @@
         </TextBlock>
 
         <Button x:Name="btnLogin" Grid.Row="8" Grid.Column="2" 
-                VerticalAlignment="Center" Height="45"
+                VerticalAlignment="Center" Height="45" IsEnabled="False"
                 ToolTip="Pulsar para iniciar sesión" Click="btnLogin_Click" Margin="25,0,16,0">
             <StackPanel Height="50" Width="54">
                 <Image x:Name="imgLogin" Source="/img/Fnormal.png" Height="auto" Width="auto">

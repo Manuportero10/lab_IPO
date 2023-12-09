@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Empleado.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -71,10 +72,32 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PaginaListadoEmpleados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PaginaListadoPacientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PaginaPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MenuPrincipal.xaml.cs">
       <DependentUpon>MenuPrincipal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paciente.cs" />
+    <Compile Include="PaginaListadoEmpleados.xaml.cs">
+      <DependentUpon>PaginaListadoEmpleados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaListadoPacientes.xaml.cs">
+      <DependentUpon>PaginaListadoPacientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaPrincipal.xaml.cs">
+      <DependentUpon>PaginaPrincipal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -117,6 +140,11 @@
   <ItemGroup>
     <Resource Include="img\check_verde.png" />
     <Resource Include="img\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\doctor.jpg" />
+    <Resource Include="img\oficinista.png" />
+    <Resource Include="img\programador.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -36,6 +36,14 @@ namespace AplicaciónFisioterapia
             InitializeComponent();
         }
 
+        private void MainWindow_closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult resultado = MessageBox.Show("¿Estas seguro de que quieres cerrar la aplicación?", "Cierre de aplicación", MessageBoxButton.YesNo, MessageBoxImage.Information);
+            if (resultado == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             menu_principal = new MenuPrincipal();
@@ -56,6 +64,11 @@ namespace AplicaciónFisioterapia
                     passContrasena.Focus();
                     // deshabilitar entrada de login
                     txtUsuario.IsEnabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Usuario introducido incorrecto", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                    
                 }
             }
         }
@@ -92,6 +105,7 @@ namespace AplicaciónFisioterapia
             {
                 btnLogin.Focus();
                 imgLogin.Source = imgFazul;
+                btnLogin.IsEnabled = true;
             }
             else
             {
@@ -99,5 +113,6 @@ namespace AplicaciónFisioterapia
             }
 
         }
+
     }
 }

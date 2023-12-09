@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplicaciónFisioterapia"
         mc:Ignorable="d"
-        Title="MenuPrincipal" Height="550" Width="900">
+        Title="MenuPrincipal" Height="550" Width="900" Closing="MenuPrincipal_closing">
     <Grid x:Name="mi_grid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
@@ -24,7 +24,7 @@
         <Button x:Name="btnCitas" Grid.Column="1" Content="Citas" HorizontalAlignment="Left" Margin="25,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="50" Width="68" Click="btnCitas_Click"/>
         <Button x:Name="btnPacientes" Grid.Column="1" Content="Pacientes" HorizontalAlignment="Left" Margin="126,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="50" Width="68" Click="btnPacientes_click"/>
         <Button x:Name="btnEmpleado" Grid.Column="1" Content="Empleado" HorizontalAlignment="Left" Margin="229,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="50" Width="68" Click="btnEmpleado_click"/>
-        <Button x:Name="Historial" Grid.Column="1" Content="Historial" HorizontalAlignment="Left" Margin="332,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="50" Width="68"/>
+        <Button x:Name="btnHistorial" Grid.Column="1" Content="Historial" HorizontalAlignment="Left" Margin="332,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="50" Width="68" Click="btnHistorial_click"/>
 
         <Grid Grid.Column="1" Margin="0,22,0,0" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
@@ -33,10 +33,20 @@
                 <ColumnDefinition Width="155*"/>
             </Grid.ColumnDefinitions>
 
+            <Line Grid.Column="0" X1="10" Y1="85" X2="443" Y2="85" Stroke="Black" StrokeThickness="0.4"></Line>
+            <Line Grid.Column="1" X1="0" Y1="85" X2="209" Y2="85" Stroke="Black" StrokeThickness="0.4"></Line>
+            <Line Grid.Column="2" X1="0" Y1="85" X2="155" Y2="85" Stroke="Black" StrokeThickness="0.4"></Line>
+            
             <TextBlock Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="ID: #0001" VerticalAlignment="Center" Height="16" Width="155"/>
             <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="0,24,0,0" TextWrapping="Wrap" Text="Usuario: Alberto Martinez" VerticalAlignment="Top" Height="16" Width="155"/>
             <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="0,56,0,0" TextWrapping="Wrap" Text="Último acceso: 14/12/2023" VerticalAlignment="Top" Height="16" Width="155"/>
-            <Ellipse Grid.Column="2" HorizontalAlignment="Center" Height="75" Stroke="Black" VerticalAlignment="Center" Width="88"/>
+
+            <Ellipse Grid.Column="2" HorizontalAlignment="Center" Height="75" Stroke="Transparent" VerticalAlignment="Center" Width="88">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="img/empleado.jpg" Stretch="UniformToFill"></ImageBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            
         </Grid>
 
         <Grid x:Name="grid_buscador" Grid.Column="1" Grid.Row="3">
@@ -50,10 +60,11 @@
             
             <TextBox x:Name = "txtBuscador" Visibility="Hidden"
                 Grid.Column = "2" HorizontalAlignment = "Left"
-               VerticalAlignment = "Center" Width = "300" Height = "25" />
+               VerticalAlignment = "Center" Width = "225" Height = "25" VerticalContentAlignment="Center" />
 
 
         </Grid>
+        <Frame x:Name="pnlContenido" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="4"/>
 
     </Grid>
 </Window>

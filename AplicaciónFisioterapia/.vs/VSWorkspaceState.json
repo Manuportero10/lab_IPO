@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AplicaciónFisioterapia",
-    "\\AplicaciónFisioterapia\\img"
+    "\\AplicaciónFisioterapia"
   ],
-  "SelectedNode": "\\AplicaciónFisioterapia\\MainWindow.xaml",
+  "SelectedNode": "\\AplicaciónFisioterapia\\MenuPrincipal.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

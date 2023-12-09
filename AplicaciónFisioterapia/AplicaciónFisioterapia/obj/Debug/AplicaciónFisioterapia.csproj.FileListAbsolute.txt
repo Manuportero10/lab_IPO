@@ -30,3 +30,9 @@ C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\Aplicaci�
 C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\AplicaciónFisioterapia.csproj.CoreCompileInputs.cache
 C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\MenuPrincipal.g.cs
 C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\MenuPrincipal.baml
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\PaginaListadoEmpleados.g.cs
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\PaginaListadoEmpleados.baml
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\PaginaPrincipal.g.cs
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\PaginaPrincipal.baml
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\PaginaListadoPacientes.g.cs
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\PaginaListadoPacientes.baml
