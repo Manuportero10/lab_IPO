@@ -72,6 +72,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PaginaAñadirEmpleado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PaginaAñadirPacientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PaginaListadoEmpleados.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -90,6 +98,12 @@
       <DependentUpon>MenuPrincipal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Paciente.cs" />
+    <Compile Include="PaginaAñadirEmpleado.xaml.cs">
+      <DependentUpon>PaginaAñadirEmpleado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaAñadirPacientes.xaml.cs">
+      <DependentUpon>PaginaAñadirPacientes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PaginaListadoEmpleados.xaml.cs">
       <DependentUpon>PaginaListadoEmpleados.xaml</DependentUpon>
     </Compile>

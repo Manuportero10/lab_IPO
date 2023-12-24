@@ -50,6 +50,7 @@
         <Button x:Name="btnLogin" Grid.Row="8" Grid.Column="2" 
                 VerticalAlignment="Center" Height="45" IsEnabled="False"
                 ToolTip="Pulsar para iniciar sesión" Click="btnLogin_Click" Margin="25,0,16,0">
+
             <StackPanel Height="50" Width="54">
                 <Image x:Name="imgLogin" Source="/img/Fnormal.png" Height="auto" Width="auto">
 

@@ -9,11 +9,12 @@
       Title="PaginaListadoEmpleados">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="51*"/>
-            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="255*"/>
+            <ColumnDefinition Width="254*"/>
+            <ColumnDefinition Width="291*"/>
         </Grid.ColumnDefinitions>
 
-        <ListBox x:Name="lstEmpleados">
+        <ListBox x:Name="lstEmpleados" SelectionChanged="lstEmpleados_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -24,32 +25,44 @@
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-            
+
         </ListBox>
 
-        <StackPanel x:Name="spEmpleados" Grid.Column="1" Orientation="Vertical">
+        <StackPanel x:Name="spEmpleados" Grid.Column="1" Orientation="Vertical" Grid.ColumnSpan="2">
 
-            <Label FontWeight="Bold">Nombre:</Label>
-            <TextBlock x:Name="txtNombre" Margin="5"
-            Text= "{Binding ElementName=lstEmpleados, Path=SelectedItem.nombre}"/>
+            <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Nombre:</Label>
+            <TextBox x:Name="txtbNombre" Margin="5,5,0,0" HorizontalAlignment="Left"
+                       Text="{Binding ElementName=lstEmpleados, Path=SelectedItem.nombre}"
+                       IsEnabled="False">
+            </TextBox>
 
-            <Label FontWeight="Bold">DNI:</Label>
-            <TextBlock x:Name="txtDNI" Margin="5"
-            Text= "{Binding ElementName=lstEmpleados, Path=SelectedItem.DNI}"/>
+            <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">DNI:</Label>
+            <TextBox x:Name="txtbDNI" Margin="5,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text="{Binding ElementName=lstEmpleados, Path=SelectedItem.DNI}"
+                       IsEnabled="False">
+            </TextBox>
 
-            <Label FontWeight="Bold">Sueldo mensual:</Label>
-            <TextBlock x:Name="txtSueldo" Margin="5"
-            Text= "{Binding ElementName=lstEmpleados, Path=SelectedItem.sueldo}"/>
 
-            <Label FontWeight="Bold">Expiracion contrato:</Label>
-            <TextBlock x:Name="txtExpir" Margin="5"
-            Text= "{Binding ElementName=lstEmpleados, Path=SelectedItem.anio_fin_contrato}"/>
+            <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Sueldo mensual:</Label>
+            <TextBox x:Name="txtbSueldo" Margin="5,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text="{Binding ElementName=lstEmpleados, Path=SelectedItem.sueldo}"
+                       IsEnabled="False">
+            </TextBox>
 
-            <Label FontWeight="Bold">Rol desempeñado:</Label>
-            <TextBlock x:Name="txtRol" Margin="5"
-            Text= "{Binding ElementName=lstEmpleados, Path=SelectedItem.rol}"/>
+            <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Expiración contrato:</Label>
+            <TextBox x:Name="txtbExpContr" Margin="5,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text="{Binding ElementName=lstEmpleados, Path=SelectedItem.anio_fin_contrato}"
+                       IsEnabled="False">
+            </TextBox>
 
-        </StackPanel> 
+            <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Rol desempeñado:</Label>
+            <ComboBox Name="cbRol" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,0,0"
+                IsEnabled="False" SelectedItem="{Binding ElementName=lstEmpleados, Path=SelectedItem.rol}" />
 
+        </StackPanel>
+        <Button x:Name="btnMod" Grid.Column="2" Content="modificar" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,-100,0,0" Visibility="Hidden" Click="btnMod_Click"/>
+        <Button x:Name="btnEliminar" Grid.Column="2" Content="eliminar" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,-50,0,0" Visibility="Hidden" Click="btnEliminar_Click" />
+        <Button x:Name="btnGuardar" Grid.Column="2" Content="guardar cambios" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Visibility="Hidden" Click="btnGuardar_Click"/>
+        <Button x:Name="btnDescartar" Grid.Column="2" Content="descartar cambios" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,50,0,0" Visibility="Hidden" Click="btnDescartar_Click"/>
     </Grid>
 </Page>

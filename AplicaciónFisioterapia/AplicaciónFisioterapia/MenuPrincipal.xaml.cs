@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
@@ -23,15 +24,14 @@ namespace AplicaciónFisioterapia
 
         private BitmapImage imgLupa = new BitmapImage(new Uri("img/Lupa.png", UriKind.Relative));
 
-        private Button btnCrearCita = new Button();
-        private Button btnBorrarCita = new Button();
-        private Button btnVerCitas = new Button();
-        private Button btnCambiarCita = new Button();
+        private Button btnAnadirCita = new Button();
+        private Button btnListadoCitas = new Button();
         private Button btnListadoPacientes = new Button();
         private Button btnCalendarioPacientes = new Button();
+        private Button btnAnadirPacientes = new Button();
         private Button btnAnadirEmpleado = new Button();
         private Button btnListadoEmpleados = new Button();
-        private Page[] paneles = new Page[] {new PaginaPrincipal(),new PaginaListadoEmpleados(), new PaginaListadoPacientes()}; //dentro iran las paginas
+        private Page[] paneles = new Page[] {new PaginaPrincipal(),new PaginaListadoEmpleados(), new PaginaListadoPacientes(), new PaginaAñadirEmpleado()}; //dentro iran las paginas
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -85,17 +85,11 @@ namespace AplicaciónFisioterapia
             btnCitas.BorderBrush = Brushes.Black;
             btnCitas.BorderThickness = new Thickness(0.6);
 
-            btnCrearCita.BorderBrush = Brushes.Black;
-            btnCrearCita.BorderThickness = new Thickness(0.6);
+            btnAnadirCita.BorderBrush = Brushes.Black;
+            btnAnadirCita.BorderThickness = new Thickness(0.6);
 
-            btnBorrarCita.BorderBrush = Brushes.Black;
-            btnBorrarCita.BorderThickness = new Thickness(0.6);
-
-            btnVerCitas.BorderBrush = Brushes.Black;
-            btnVerCitas.BorderThickness = new Thickness(0.6);
-
-            btnCambiarCita.BorderBrush = Brushes.Black;
-            btnCambiarCita.BorderThickness = new Thickness(0.6);
+            btnListadoCitas.BorderBrush = Brushes.Black;
+            btnListadoCitas.BorderThickness = new Thickness(0.6);
 
             btnListadoPacientes.BorderBrush = Brushes.Black;
             btnListadoPacientes.BorderThickness = new Thickness(0.6);
@@ -140,54 +134,32 @@ namespace AplicaciónFisioterapia
 
             
             // ponemos el boton en la parte del grid correspondiente
-            Grid.SetColumn(btnCrearCita, columna_grid);
-            Grid.SetRow(btnCrearCita, fila_grid);
-            
-            btnCrearCita.Name = "btnCrearCita";
-            btnCrearCita.Content = "Crear Cita";
-            btnCrearCita.HorizontalAlignment = HorizontalAlignment.Left;
-            btnCrearCita.Margin = new Thickness(25,8,0,0);
-            btnCrearCita.VerticalAlignment = VerticalAlignment.Top;
-            btnCrearCita.Height = 27;
-            btnCrearCita.Width = 82;
-            mi_grid.Children.Add(btnCrearCita);
+            Grid.SetColumn(btnAnadirCita, columna_grid);
+            Grid.SetRow(btnAnadirCita, fila_grid);
+
+            btnAnadirCita.Name = "btnAnadirCita";
+            btnAnadirCita.Content = "Añadir Cita";
+            btnAnadirCita.Click += btnAnadirCita_click;
+            btnAnadirCita.HorizontalAlignment = HorizontalAlignment.Left;
+            btnAnadirCita.Margin = new Thickness(25,8,0,0);
+            btnAnadirCita.VerticalAlignment = VerticalAlignment.Top;
+            btnAnadirCita.Height = 27;
+            btnAnadirCita.Width = 150;
+            mi_grid.Children.Add(btnAnadirCita);
            
-            btnBorrarCita.Name = "btnBorrarCita";
-            btnBorrarCita.Content = "Borrar Cita";
-            btnBorrarCita.HorizontalAlignment = HorizontalAlignment.Left;
-            btnBorrarCita.Margin = new Thickness(144, 8, 0, 0);
-            btnBorrarCita.VerticalAlignment = VerticalAlignment.Top;
-            btnBorrarCita.Height = 27;
-            btnBorrarCita.Width = 82;
-            // ponemos el boton en la parte del grid correspondiente
-            Grid.SetColumn(btnBorrarCita, columna_grid);
-            Grid.SetRow(btnBorrarCita, fila_grid);
-            mi_grid.Children.Add(btnBorrarCita);
 
-            btnVerCitas.Name = "btnVerCita";
-            btnVerCitas.Content = "Ver Citas";
-            btnVerCitas.HorizontalAlignment = HorizontalAlignment.Left;
-            btnVerCitas.Margin = new Thickness(263, 8, 0, 0);
-            btnVerCitas.VerticalAlignment = VerticalAlignment.Top;
-            btnVerCitas.Height = 27;
-            btnVerCitas.Width = 82;
+            btnListadoCitas.Name = "btnListadoCitas";
+            btnListadoCitas.Content = "Listado de Citas";
+            btnListadoCitas.Click += btnListadoCitas_click;
+            btnListadoCitas.HorizontalAlignment = HorizontalAlignment.Left;
+            btnListadoCitas.Margin = new Thickness(255, 8, 0, 0);
+            btnListadoCitas.VerticalAlignment = VerticalAlignment.Top;
+            btnListadoCitas.Height = 27;
+            btnListadoCitas.Width = 150;
             // ponemos el boton en la parte del grid correspondiente
-            Grid.SetColumn(btnVerCitas, columna_grid);
-            Grid.SetRow(btnVerCitas, fila_grid);
-            mi_grid.Children.Add(btnVerCitas);
-
-            btnCambiarCita.Name = "btnCambiarCita";
-            btnCambiarCita.Content = "Cambiar Cita";
-            btnCambiarCita.HorizontalAlignment = HorizontalAlignment.Left;
-            btnCambiarCita.Margin = new Thickness(384, 8, 0, 0);
-            btnCambiarCita.VerticalAlignment = VerticalAlignment.Top;
-            btnCambiarCita.Height = 27;
-            btnCambiarCita.Width = 82;
-            // ponemos el boton en la parte del grid correspondiente
-            Grid.SetColumn(btnCambiarCita, columna_grid);
-            Grid.SetRow(btnCambiarCita, fila_grid);
-            mi_grid.Children.Add(btnCambiarCita);
-
+            Grid.SetColumn(btnListadoCitas, columna_grid);
+            Grid.SetRow(btnListadoCitas, fila_grid);
+            mi_grid.Children.Add(btnListadoCitas);
         }
 
         private void btnPacientes_click(object sender, RoutedEventArgs e)
@@ -203,6 +175,20 @@ namespace AplicaciónFisioterapia
             btnPacientes.BorderBrush = Brushes.AliceBlue;
             btnPacientes.BorderThickness = new Thickness(4);
 
+
+            // ponemos el boton en la parte del grid correspondiente
+            Grid.SetColumn(btnAnadirPacientes, columna_grid);
+            Grid.SetRow(btnAnadirPacientes, fila_grid);
+            btnAnadirPacientes.Name = "btnAnadirPacientes";
+            btnAnadirPacientes.Content = "Añadir paciente";
+            btnAnadirPacientes.Click += btnAnadirPacientes_click; // asignamos el manejador de eventos
+            btnAnadirPacientes.HorizontalAlignment = HorizontalAlignment.Left;
+            btnAnadirPacientes.Margin = new Thickness(25, 8, 0, 0);
+            btnAnadirPacientes.VerticalAlignment = VerticalAlignment.Top;
+            btnAnadirPacientes.Height = 27;
+            btnAnadirPacientes.Width = 150;
+            mi_grid.Children.Add(btnAnadirPacientes); // añadimos el boton
+
             // ponemos el boton en la parte del grid correspondiente
             Grid.SetColumn(btnListadoPacientes, columna_grid);
             Grid.SetRow(btnListadoPacientes, fila_grid);
@@ -210,7 +196,7 @@ namespace AplicaciónFisioterapia
             btnListadoPacientes.Content = "Listado de pacientes";
             btnListadoPacientes.Click += btnListadoPacientes_click; // asignamos el manejador de eventos
             btnListadoPacientes.HorizontalAlignment = HorizontalAlignment.Left;
-            btnListadoPacientes.Margin = new Thickness(25, 8, 0, 0);
+            btnListadoPacientes.Margin = new Thickness(255, 8, 0, 0);
             btnListadoPacientes.VerticalAlignment = VerticalAlignment.Top;
             btnListadoPacientes.Height = 27;
             btnListadoPacientes.Width = 150;
@@ -220,7 +206,7 @@ namespace AplicaciónFisioterapia
             btnCalendarioPacientes.Content = "Calendario pacientes";
             btnCalendarioPacientes.Click += btnCalendarioPacientes_click;
             btnCalendarioPacientes.HorizontalAlignment = HorizontalAlignment.Left;
-            btnCalendarioPacientes.Margin = new Thickness(255, 8, 0, 0);
+            btnCalendarioPacientes.Margin = new Thickness(485, 8, 0, 0);
             btnCalendarioPacientes.VerticalAlignment = VerticalAlignment.Top;
             btnCalendarioPacientes.Height = 27;
             btnCalendarioPacientes.Width = 150;
@@ -258,7 +244,7 @@ namespace AplicaciónFisioterapia
             mi_grid.Children.Add(btnAnadirEmpleado);
 
             btnListadoEmpleados.Name = "btnListadoEmpleados";
-            btnListadoEmpleados.Content = "Listado empleados";
+            btnListadoEmpleados.Content = "Listado de empleados";
             btnListadoEmpleados.Click += btnListadoEmpleados_click;
             btnListadoEmpleados.HorizontalAlignment = HorizontalAlignment.Left;
             btnListadoEmpleados.Margin = new Thickness(255, 8, 0, 0);
@@ -271,6 +257,42 @@ namespace AplicaciónFisioterapia
             mi_grid.Children.Add(btnListadoEmpleados); 
         }
 
+        private void btnAnadirCita_click(object sender, RoutedEventArgs e)
+        {
+            reestablecer_bordes_grid(mi_grid, btnAnadirCita);
+            //resaltamos el boton pulsado
+            btnAnadirCita.BorderBrush = Brushes.AliceBlue;
+            btnAnadirCita.BorderThickness = new Thickness(4);
+            imagLupa.Visibility = Visibility.Hidden;
+            txtBuscador.Visibility = Visibility.Hidden;
+            txtBuscador.Text = string.Empty;
+            pnlContenido.Content = new PaginaAñadirPacientes(); //se cambia
+
+        }
+
+        private void btnListadoCitas_click(object sender, RoutedEventArgs e)
+        {
+            reestablecer_bordes_grid(mi_grid, btnListadoCitas);
+            //resaltamos el boton pulsado
+            btnListadoCitas.BorderBrush = Brushes.AliceBlue;
+            btnListadoCitas.BorderThickness = new Thickness(4);
+            imagLupa.Visibility = Visibility.Visible;
+            txtBuscador.Visibility = Visibility.Visible;
+            pnlContenido.Content = paneles[2]; //se cambia
+
+        }
+        private void btnAnadirPacientes_click(object sender, RoutedEventArgs e)
+        {
+            reestablecer_bordes_grid(mi_grid, btnAnadirPacientes);
+            //resaltamos el boton pulsado
+            btnAnadirPacientes.BorderBrush = Brushes.AliceBlue;
+            btnAnadirPacientes.BorderThickness = new Thickness(4);
+            imagLupa.Visibility = Visibility.Hidden;
+            txtBuscador.Visibility = Visibility.Hidden;
+            txtBuscador.Text = string.Empty;
+            pnlContenido.Content = new PaginaAñadirPacientes();
+
+        }
         private void btnListadoPacientes_click(object sender, RoutedEventArgs e)
         {
             reestablecer_bordes_grid(mi_grid, btnListadoPacientes);
@@ -292,6 +314,7 @@ namespace AplicaciónFisioterapia
             imagLupa.Visibility = Visibility.Hidden;
             txtBuscador.Visibility = Visibility.Hidden;
             txtBuscador.Text = string.Empty;
+            pnlContenido.Content = paneles[0];
             
         }
         private void btnAnadirEmpleado_click(object sender, RoutedEventArgs e)
@@ -303,6 +326,7 @@ namespace AplicaciónFisioterapia
             imagLupa.Visibility = Visibility.Hidden;
             txtBuscador.Visibility = Visibility.Hidden;
             txtBuscador.Text = string.Empty;
+            pnlContenido.Content = new PaginaAñadirEmpleado();
 
         }
         private void btnListadoEmpleados_click(object sender, RoutedEventArgs e)
@@ -314,7 +338,7 @@ namespace AplicaciónFisioterapia
             imagLupa.Visibility = Visibility.Visible;
             txtBuscador.Visibility = Visibility.Visible;
             pnlContenido.Content = paneles[1];
-
+           
         }
 
         private void btnHistorial_click(object sender, RoutedEventArgs e)

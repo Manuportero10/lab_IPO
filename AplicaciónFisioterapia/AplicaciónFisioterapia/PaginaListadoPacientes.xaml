@@ -10,11 +10,12 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="51*"/>
-            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="255*"/>
+            <ColumnDefinition Width="254*"/>
+            <ColumnDefinition Width="291*"/>
         </Grid.ColumnDefinitions>
 
-        <ListBox x:Name="lstPacientes">
+        <ListBox x:Name="lstPacientes" SelectionChanged="lstPacientes_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -29,26 +30,40 @@
         <StackPanel x:Name="spPacientes" Grid.Column="1" Orientation="Vertical">
 
             <Label FontWeight="Bold">Identificador:</Label>
-            <TextBlock x:Name="txtNombre" Margin="5"
-            Text= "{Binding ElementName=lstPacientes, Path=SelectedItem.Id}"/>
+            <TextBox x:Name="txtbID" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text= "{Binding ElementName=lstPacientes, Path=SelectedItem.Id}"
+                       IsEnabled="False">
+            </TextBox>
 
             <Label FontWeight="Bold">DNI:</Label>
-            <TextBlock x:Name="txtDNI" Margin="5"
-            Text= "{Binding ElementName=lstPacientes, Path=SelectedItem.Dni}"/>
+            <TextBox x:Name="txtbDNI" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text= "{Binding ElementName=lstPacientes, Path=SelectedItem.Dni}"
+                       IsEnabled="False">
+            </TextBox>
 
             <Label FontWeight="Bold">Nombre:</Label>
-            <TextBlock x:Name="txtSueldo" Margin="5"
-            Text= "{Binding ElementName=lstPacientes, Path=SelectedItem.Name}"/>
+            <TextBox x:Name="txtbNombre" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text= "{Binding ElementName=lstPacientes, Path=SelectedItem.Name}"
+                       IsEnabled="False">
+            </TextBox>
 
             <Label FontWeight="Bold">Edad:</Label>
-            <TextBlock x:Name="txtExpir" Margin="5"
-            Text= "{Binding ElementName=lstPacientes, Path=SelectedItem.edad}"/>
+            <TextBox x:Name="txtbEdad" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text= "{Binding ElementName=lstPacientes, Path=SelectedItem.edad}"
+                       IsEnabled="False">
+            </TextBox>
 
-            <Label FontWeight="Bold">Numero de tarjeta sanitaria:</Label>
-            <TextBlock x:Name="txtRol" Margin="5"
-            Text= "{Binding ElementName=lstPacientes, Path=SelectedItem.tarjeta}"/>
-
+            <Label FontWeight="Bold">Número de tarjeta sanitaria:</Label>
+            <TextBox x:Name="txtbTarjeta" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text= "{Binding ElementName=lstPacientes, Path=SelectedItem.tarjeta}"
+                       IsEnabled="False">
+            </TextBox>
         </StackPanel>
+
+        <Button x:Name="btnMod_pac" Grid.Column="2" Content="modificar" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,-100,0,0" Visibility="Hidden" Click="btnMod_pac_Click"/>
+        <Button x:Name="btnEliminar_pac" Grid.Column="2" Content="eliminar" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,-50,0,0" Visibility="Hidden" Click="btnEliminar_pac_Click" />
+        <Button x:Name="btnGuardar_pac" Grid.Column="2" Content="guardar cambios" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Visibility="Hidden" Click="btnGuardar_pac_Click"/>
+        <Button x:Name="btnDescartar_pac" Grid.Column="2" Content="descartar cambios" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,50,0,0" Visibility="Hidden" Click="btnDescartar_pac_Click"/>
 
     </Grid>
 </Page>

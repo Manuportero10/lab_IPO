@@ -36,3 +36,7 @@ C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\Aplicaci�
 C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\PaginaPrincipal.baml
 C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\PaginaListadoPacientes.g.cs
 C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\PaginaListadoPacientes.baml
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\PaginaAñadirEmpleado.g.cs
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\PaginaAñadirEmpleado.baml
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\PaginaAñadirPacientes.g.cs
+C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\obj\Debug\PaginaAñadirPacientes.baml

@@ -38,7 +38,7 @@
             <Line Grid.Column="2" X1="0" Y1="85" X2="155" Y2="85" Stroke="Black" StrokeThickness="0.4"></Line>
             
             <TextBlock Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="ID: #0001" VerticalAlignment="Center" Height="16" Width="155"/>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="0,24,0,0" TextWrapping="Wrap" Text="Usuario: Alberto Martinez" VerticalAlignment="Top" Height="16" Width="155"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="0,24,0,0" TextWrapping="Wrap" Text="Usuario: Alberto Martínez" VerticalAlignment="Top" Height="16" Width="155"/>
             <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="0,56,0,0" TextWrapping="Wrap" Text="Último acceso: 14/12/2023" VerticalAlignment="Top" Height="16" Width="155"/>
 
             <Ellipse Grid.Column="2" HorizontalAlignment="Center" Height="75" Stroke="Transparent" VerticalAlignment="Center" Width="88">
@@ -60,7 +60,7 @@
             
             <TextBox x:Name = "txtBuscador" Visibility="Hidden"
                 Grid.Column = "2" HorizontalAlignment = "Left"
-               VerticalAlignment = "Center" Width = "225" Height = "25" VerticalContentAlignment="Center" />
+               VerticalAlignment = "Center" Width = "204" Height = "25" VerticalContentAlignment="Center" />
 
 
         </Grid>
