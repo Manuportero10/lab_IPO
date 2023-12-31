@@ -19,20 +19,24 @@
         <StackPanel x:Name="spEmpleados" HorizontalAlignment="Center" Orientation="Vertical" Grid.Column="1" Width="212">
 
             <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Nombre:</Label>
-            <TextBox x:Name="txtbNombre_emp" Width="100" HorizontalAlignment="Left" Margin="5,5,0,0" TextChanged="txtbNombre_emp_TextChanged">
+            <TextBox x:Name="txtbNombre_emp" Width="100" HorizontalAlignment="Left" Margin="5,5,0,0"
+                     KeyUp="txtbNombre_emp_KeyUp">
             </TextBox>
 
 
             <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">DNI:</Label>
-            <TextBox x:Name="txtbDNI_emp" Width="100" HorizontalAlignment="Left" Margin="5,5,0,0" TextChanged="txtbDNI_emp_TextChanged">
+            <TextBox x:Name="txtbDNI_emp" Width="100" HorizontalAlignment="Left" Margin="5,5,0,0"
+                     KeyUp="txtbDNI_emp_KeyUp">
             </TextBox>
 
             <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Sueldo mensual:</Label>
-            <TextBox x:Name="txtbSueldo_emp" Width="100" HorizontalAlignment="Left" Margin="5,5,0,0" TextChanged="txtbSueldo_emp_TextChanged">
+            <TextBox x:Name="txtbSueldo_emp" Width="100" HorizontalAlignment="Left" Margin="5,5,0,0"
+                     KeyUp="txtbSueldo_emp_KeyUp">
             </TextBox>
 
             <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Expiración contrato:</Label>
-            <TextBox x:Name="txtExpir_emp" Width="100" HorizontalAlignment="Left" Margin="5,5,0,0" TextChanged="txtExpir_emp_TextChanged">
+            <TextBox x:Name="txtExpir_emp" Width="100" HorizontalAlignment="Left" Margin="5,5,0,0"
+                     KeyUp="txtExpir_emp_KeyUp">
             </TextBox>
 
             <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Rol desempeñado:</Label>

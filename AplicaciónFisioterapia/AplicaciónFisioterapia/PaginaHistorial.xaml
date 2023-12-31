@@ -1,0 +1,64 @@
+﻿<Page x:Class="AplicaciónFisioterapia.PaginaHistorial"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AplicaciónFisioterapia"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PaginaHistorial">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="270*"/>
+            <ColumnDefinition Width="254*"/>
+            <ColumnDefinition Width="291*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox x:Name="lstHistorial" SelectionChanged="lstHistorial_SelectionChanged" HorizontalAlignment="Left" Width="251" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock x:Name="txtHistorial" Text="{Binding identificador}" VerticalAlignment="Center">
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel x:Name="spHistorial" Grid.Column="1" Orientation="Vertical">
+
+            <Label FontWeight="Bold">Fecha:</Label>
+            <TextBox x:Name="txtFecha" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text= "{Binding ElementName=lstHistorial, Path=SelectedItem.fecha_formateada}"
+                       IsEnabled="False">
+            </TextBox>
+
+            <Label FontWeight="Bold">Nombre paciente:</Label>
+            <TextBox x:Name="txtbNombre_pac" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text= "{Binding ElementName=lstHistorial, Path=SelectedItem.paciente.Name}"
+                       IsEnabled="False">
+            </TextBox>
+
+            <Label FontWeight="Bold">Nombre Empleado:</Label>
+            <TextBox x:Name="txtbNombre_emp" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text= "{Binding ElementName=lstHistorial, Path=SelectedItem.empleado.nombre}"
+                       IsEnabled="False">
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2">
+            <Label FontWeight="Bold">Lista de dolencias:</Label>
+            <ListBox x:Name="lstDolencias" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       IsEnabled="False">
+
+            </ListBox>
+
+            <Label FontWeight="Bold">Lista de tratamientos:</Label>
+            <ListBox x:Name="lstTratamientos" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       IsEnabled="False">
+            </ListBox>
+        </StackPanel>
+
+
+    </Grid>
+
+</Page>

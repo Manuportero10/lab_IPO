@@ -63,7 +63,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Cita.cs" />
     <Compile Include="Empleado.cs" />
+    <Compile Include="Historial.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -72,11 +74,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PaginaAñadirCita.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PaginaAñadirEmpleado.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PaginaAñadirPacientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PaginaHistorial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PaginaListadoCitas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -98,11 +112,20 @@
       <DependentUpon>MenuPrincipal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Paciente.cs" />
+    <Compile Include="PaginaAñadirCita.xaml.cs">
+      <DependentUpon>PaginaAñadirCita.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PaginaAñadirEmpleado.xaml.cs">
       <DependentUpon>PaginaAñadirEmpleado.xaml</DependentUpon>
     </Compile>
     <Compile Include="PaginaAñadirPacientes.xaml.cs">
       <DependentUpon>PaginaAñadirPacientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaHistorial.xaml.cs">
+      <DependentUpon>PaginaHistorial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaListadoCitas.xaml.cs">
+      <DependentUpon>PaginaListadoCitas.xaml</DependentUpon>
     </Compile>
     <Compile Include="PaginaListadoEmpleados.xaml.cs">
       <DependentUpon>PaginaListadoEmpleados.xaml</DependentUpon>
@@ -159,6 +182,21 @@
     <Resource Include="img\doctor.jpg" />
     <Resource Include="img\oficinista.png" />
     <Resource Include="img\programador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\adulto.png" />
+    <Resource Include="img\anciano.png" />
+    <Resource Include="img\bebe.png" />
+    <Resource Include="img\joven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\descartar.png" />
+    <Resource Include="img\editar.png" />
+    <Resource Include="img\eliminar.png" />
+    <Resource Include="img\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\fisioplus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

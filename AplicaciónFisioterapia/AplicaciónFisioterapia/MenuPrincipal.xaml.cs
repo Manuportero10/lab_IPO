@@ -27,11 +27,10 @@ namespace AplicaciónFisioterapia
         private Button btnAnadirCita = new Button();
         private Button btnListadoCitas = new Button();
         private Button btnListadoPacientes = new Button();
-        private Button btnCalendarioPacientes = new Button();
         private Button btnAnadirPacientes = new Button();
         private Button btnAnadirEmpleado = new Button();
         private Button btnListadoEmpleados = new Button();
-        private Page[] paneles = new Page[] {new PaginaPrincipal(),new PaginaListadoEmpleados(), new PaginaListadoPacientes(), new PaginaAñadirEmpleado()}; //dentro iran las paginas
+        private Page[] paneles = new Page[] {new PaginaPrincipal(),new PaginaListadoEmpleados(), new PaginaListadoPacientes(), new PaginaAñadirEmpleado(), new PaginaListadoCitas(), new PaginaHistorial()}; //dentro iran las paginas
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -41,7 +40,7 @@ namespace AplicaciónFisioterapia
 
         private void MenuPrincipal_closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            MessageBoxResult resultado = MessageBox.Show("¿Estas seguro de que quieres cerrar la aplicación?", "Cierre de aplicación", MessageBoxButton.YesNo, MessageBoxImage.Information);
+            MessageBoxResult resultado = MessageBox.Show("¿Estás seguro de que quieres cerrar la aplicación?", "Cierre de aplicación", MessageBoxButton.YesNo, MessageBoxImage.Information);
             if (resultado == MessageBoxResult.No)
             {
                 e.Cancel = true;
@@ -91,11 +90,11 @@ namespace AplicaciónFisioterapia
             btnListadoCitas.BorderBrush = Brushes.Black;
             btnListadoCitas.BorderThickness = new Thickness(0.6);
 
+            btnAnadirPacientes.BorderBrush = Brushes.Black;
+            btnAnadirPacientes.BorderThickness = new Thickness(0.6);
+
             btnListadoPacientes.BorderBrush = Brushes.Black;
             btnListadoPacientes.BorderThickness = new Thickness(0.6);
-
-            btnCalendarioPacientes.BorderBrush = Brushes.Black;
-            btnCalendarioPacientes.BorderThickness = new Thickness(0.6);
 
             btnAnadirEmpleado.BorderBrush = Brushes.Black;
             btnAnadirEmpleado.BorderThickness = new Thickness(0.6);
@@ -201,19 +200,6 @@ namespace AplicaciónFisioterapia
             btnListadoPacientes.Height = 27;
             btnListadoPacientes.Width = 150;
             mi_grid.Children.Add(btnListadoPacientes); // añadimos el boton
-
-            btnCalendarioPacientes.Name = "btnCalendarioPacientes";
-            btnCalendarioPacientes.Content = "Calendario pacientes";
-            btnCalendarioPacientes.Click += btnCalendarioPacientes_click;
-            btnCalendarioPacientes.HorizontalAlignment = HorizontalAlignment.Left;
-            btnCalendarioPacientes.Margin = new Thickness(485, 8, 0, 0);
-            btnCalendarioPacientes.VerticalAlignment = VerticalAlignment.Top;
-            btnCalendarioPacientes.Height = 27;
-            btnCalendarioPacientes.Width = 150;
-            // ponemos el boton en la parte del grid correspondiente
-            Grid.SetColumn(btnCalendarioPacientes, columna_grid);
-            Grid.SetRow(btnCalendarioPacientes, fila_grid);
-            mi_grid.Children.Add(btnCalendarioPacientes);
         }
 
         private void btnEmpleado_click(object sender, RoutedEventArgs e)
@@ -266,7 +252,7 @@ namespace AplicaciónFisioterapia
             imagLupa.Visibility = Visibility.Hidden;
             txtBuscador.Visibility = Visibility.Hidden;
             txtBuscador.Text = string.Empty;
-            pnlContenido.Content = new PaginaAñadirPacientes(); //se cambia
+            pnlContenido.Content = new PaginaAñadirCita();
 
         }
 
@@ -278,7 +264,7 @@ namespace AplicaciónFisioterapia
             btnListadoCitas.BorderThickness = new Thickness(4);
             imagLupa.Visibility = Visibility.Visible;
             txtBuscador.Visibility = Visibility.Visible;
-            pnlContenido.Content = paneles[2]; //se cambia
+            pnlContenido.Content = paneles[4];
 
         }
         private void btnAnadirPacientes_click(object sender, RoutedEventArgs e)
@@ -305,18 +291,6 @@ namespace AplicaciónFisioterapia
 
         }
 
-        private void btnCalendarioPacientes_click(object sender, RoutedEventArgs e)
-        {
-            reestablecer_bordes_grid(mi_grid, btnCalendarioPacientes);
-            //resaltamos el boton pulsado
-            btnCalendarioPacientes.BorderBrush = Brushes.AliceBlue;
-            btnCalendarioPacientes.BorderThickness = new Thickness(4);
-            imagLupa.Visibility = Visibility.Hidden;
-            txtBuscador.Visibility = Visibility.Hidden;
-            txtBuscador.Text = string.Empty;
-            pnlContenido.Content = paneles[0];
-            
-        }
         private void btnAnadirEmpleado_click(object sender, RoutedEventArgs e)
         {
             reestablecer_bordes_grid(mi_grid, btnAnadirEmpleado);
@@ -347,7 +321,7 @@ namespace AplicaciónFisioterapia
             int fila_grid = 2;
             reestablecer_bordes_botones();
             limpiar(fila_grid, columna_grid, mi_grid);
-            pnlContenido.Content = paneles[0];
+            pnlContenido.Content = paneles[5];
 
             //resaltamos el boton pulsado
             btnHistorial.BorderBrush = Brushes.AliceBlue;

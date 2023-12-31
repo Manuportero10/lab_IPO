@@ -24,15 +24,18 @@
 
 
             <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">DNI:</Label>
-            <TextBox x:Name="txtbDNI" Width="100" HorizontalAlignment="Left" Margin="5,5,0,0" TextChanged="txtbDNITextChanged">
+            <TextBox x:Name="txtbDNI" Width="100" HorizontalAlignment="Left" Margin="5,5,0,0" TextChanged="txtbDNITextChanged"
+                     KeyUp="txtbDNI_KeyUp">
             </TextBox>
 
             <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Edad:</Label>
-            <TextBox x:Name="txtbEdad" Width="100" HorizontalAlignment="Left" Margin="5,5,0,0" TextChanged="txtbEdadTextChanged">
+            <TextBox x:Name="txtbEdad" Width="100" HorizontalAlignment="Left" Margin="5,5,0,0" TextChanged="txtbEdadTextChanged"
+                     KeyUp="txtbEdad_KeyUp">
             </TextBox>
 
             <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Tarjeta sanitaria:</Label>
-            <TextBox x:Name="txtbTarjeta" Width="100" HorizontalAlignment="Left" Margin="5,5,0,0" TextChanged="txtTarjetaTextChanged">
+            <TextBox x:Name="txtbTarjeta" Width="100" HorizontalAlignment="Left" Margin="5,5,0,0" TextChanged="txtTarjetaTextChanged"
+                     KeyUp="txtbTarjeta_KeyUp">
             </TextBox>
 
         </StackPanel>

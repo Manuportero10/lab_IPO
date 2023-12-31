@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplicaciónFisioterapia"
         mc:Ignorable="d"
-        Title="Iniciar Sesión" Height="381" Width="366" Closing="MainWindow_closing">
+        Title="FisioPlus - Iniciar Sesión" Height="381" Width="366" Icon="img/fisioplus.png"  Closing="MainWindow_closing">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="49*"/>

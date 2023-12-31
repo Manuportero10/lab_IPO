@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\manup\OneDrive\Escritorio\Git\lab_IPO\AplicaciónFisioterapia\AplicaciónFisioterapia\App.xaml
-7-1940835897
+101816235949
 
-131841306647
+18-985432773
 13-1310406943
-MainWindow.xaml;MenuPrincipal.xaml;PaginaAñadirEmpleado.xaml;PaginaAñadirPacientes.xaml;PaginaListadoEmpleados.xaml;PaginaListadoPacientes.xaml;PaginaPrincipal.xaml;
+MainWindow.xaml;MenuPrincipal.xaml;PaginaAñadirCita.xaml;PaginaAñadirEmpleado.xaml;PaginaAñadirPacientes.xaml;PaginaHistorial.xaml;PaginaListadoCitas.xaml;PaginaListadoEmpleados.xaml;PaginaListadoPacientes.xaml;PaginaPrincipal.xaml;
 
-False
+True
 

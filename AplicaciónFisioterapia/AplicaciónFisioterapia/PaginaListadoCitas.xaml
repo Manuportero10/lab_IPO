@@ -1,0 +1,94 @@
+﻿<Page x:Class="AplicaciónFisioterapia.PaginaListadoCitas"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AplicaciónFisioterapia"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PaginaListadoCitas">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="255*"/>
+            <ColumnDefinition Width="254*"/>
+            <ColumnDefinition Width="291*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox x:Name="lstCitas" SelectionChanged="lstCitas_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding fecha_formateada}" VerticalAlignment="Center">
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+
+        <StackPanel x:Name="spCitas" Grid.Column="1" Orientation="Vertical" Grid.ColumnSpan="2">
+
+            <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Fecha:</Label>
+            <DatePicker x:Name="dtFecha" Margin="5,5,0,0" Width="100" HorizontalAlignment="Left"
+                       Text="{Binding ElementName=lstCitas, Path=SelectedItem.fecha}"
+                       IsEnabled="False"
+                        SelectedDateChanged="dtFecha_SelectedDateChanged">
+            </DatePicker>
+
+            <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Paciente:</Label>
+            <ComboBox Name="cbPaciente" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,0,0"
+            IsEnabled="False" 
+                      SelectionChanged="cbPaciente_SelectionChanged"/>
+
+            <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Profesional:</Label>
+            <ComboBox Name="cbProfesional" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,0,0"
+            IsEnabled="False" 
+                      SelectionChanged="cbProfesional_SelectionChanged"/>
+
+            <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Tiempo previsto (s):</Label>
+            <TextBox x:Name="txtbTiempo" Margin="5,5,0,0" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text="{Binding ElementName=lstCitas, Path=SelectedItem.tiempo_en_segundos}"
+                       IsEnabled="False"
+                       TextChanged="txtbTiempo_TextChanged"
+                       KeyUp="txtbTiempo_KeyUp">
+            </TextBox>
+
+            <Label Width="200" HorizontalAlignment="Left" FontWeight="Bold">Obervaciones:</Label>
+            <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Width="250" Height="50" Margin="5,5,0,0" TextWrapping="Wrap"
+                     VerticalScrollBarVisibility="Visible" IsEnabled="False"
+                     Text="{Binding ElementName=lstCitas, Path=SelectedItem.info_adiccional}"/>
+
+        </StackPanel>
+
+        <Button x:Name="btnMod" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,-100,0,0" Visibility="Hidden" Click="btnMod_Click">
+            <StackPanel Orientation="Horizontal" Width="77">
+                <Image Source="img/editar.png" Width="20" Height="20" Margin="0,0,5,0"/>
+                <TextBlock Text="Modificar" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btnEliminar" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,-50,0,0" Visibility="Hidden" Click="btnEliminar_Click">
+            <StackPanel Orientation="Horizontal" Width="77">
+                <Image Source="img/eliminar.png" Width="20" Height="20" Margin="0,0,5,0"/>
+                <TextBlock Text="Eliminar" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btnGuardar" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Visibility="Hidden" Click="btnGuardar_Click">
+            <StackPanel Orientation="Horizontal" Width="77">
+                <Image Source="img/guardar.png" Width="20" Height="20" Margin="0,0,5,0"/>
+                <TextBlock Text="Guardar" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btnDescartar" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,50,0,0" Visibility="Hidden" Click="btnDescartar_Click">
+            <StackPanel Orientation="Horizontal" Width="77">
+                <Image Source="img/descartar.png" Width="20" Height="20" Margin="0,0,5,0"/>
+                <TextBlock Text="Descartar" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        
+    </Grid>
+    
+</Page>

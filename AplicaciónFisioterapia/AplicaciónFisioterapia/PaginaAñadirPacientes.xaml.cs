@@ -99,5 +99,83 @@ namespace AplicaciónFisioterapia
                 MessageBox.Show("Paciente " + txtbNombre.Text + " dado de alta correctamente");
             }
         }
+
+        private Boolean ComprobarEntradaEntero(TextBox txtb)
+        {
+            Boolean valido = false;
+            if (int.TryParse(txtb.Text, out int numero) && numero > 0)
+            {
+                // borde y background en verde
+                txtb.BorderBrush = Brushes.Green;
+                txtb.Background = Brushes.LightGreen;
+                valido = true;
+            }
+            else
+            {
+                // marcamos borde en rojo
+                txtb.BorderBrush = Brushes.Red;
+                txtb.Background = Brushes.LightCoral; ;
+                valido = false;
+            }
+            return valido;
+        }
+
+        private Boolean ComprobarEntradaDNI(TextBox txtb)
+        {
+            Boolean valido = false;
+            char[] dni = txtb.Text.ToCharArray();
+            if (txtb.Text.Length == 9 && int.TryParse(txtb.Text.Substring(0, 8), out _)
+                && char.IsLetter(dni[dni.Length - 1]))
+            {
+                // borde y background en verde
+                txtb.BorderBrush = Brushes.Green;
+                txtb.Background = Brushes.LightGreen;
+                valido = true;
+            }
+            else
+            {
+                // marcamos borde en rojo
+                txtb.BorderBrush = Brushes.Red;
+                txtb.Background = Brushes.LightCoral; ;
+                valido = false;
+            }
+            return valido;
+        }
+        private void txtbDNI_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (ComprobarEntradaDNI(txtbDNI) && campos_completos())
+            {
+                btn_alta.IsEnabled = true;
+            }
+            else
+            {
+                btn_alta.IsEnabled = false;
+            }
+        }
+
+        private void txtbEdad_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (ComprobarEntradaEntero(txtbEdad) && campos_completos())
+            {
+                btn_alta.IsEnabled = true;
+            }
+            else
+            {
+                btn_alta.IsEnabled = false;
+            }
+        }
+
+        private void txtbTarjeta_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (ComprobarEntradaEntero(txtbTarjeta) && campos_completos())
+            {
+                btn_alta.IsEnabled = true;
+            }
+            else
+            {
+                btn_alta.IsEnabled = false;
+            }
+        }
+
     }
 }

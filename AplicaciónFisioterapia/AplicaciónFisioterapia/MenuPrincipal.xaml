@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplicaciónFisioterapia"
         mc:Ignorable="d"
-        Title="MenuPrincipal" Height="550" Width="900" Closing="MenuPrincipal_closing">
+        Title="FisioPlus - Home" Height="550" Width="900" Icon="img/fisioplus.png" Closing="MenuPrincipal_closing">
     <Grid x:Name="mi_grid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>

@@ -77,6 +77,11 @@ namespace AplicaciónFisioterapia
             txtbSueldo.IsEnabled = false;
             cbRol.IsEnabled = false;
 
+            txtbExpContr.BorderBrush = Brushes.DimGray;
+            txtbExpContr.Background = Brushes.White;
+            txtbSueldo.BorderBrush = Brushes.DimGray;
+            txtbSueldo.Background = Brushes.White;
+
             if (lstEmpleados.SelectedItem != null)
             {
                 indice_empleado_seleccionado = lstEmpleados.SelectedIndex;
@@ -86,40 +91,44 @@ namespace AplicaciónFisioterapia
 
         private void btnMod_Click(object sender, RoutedEventArgs e)
         {
-            
-            empleado_seleccionado.nombre = txtbNombre.Text;
-            empleado_seleccionado.sueldo = Convert.ToInt32(txtbSueldo.Text);
-            empleado_seleccionado.anio_fin_contrato = Convert.ToInt32(txtbExpContr.Text);
-            empleado_seleccionado.DNI = txtbDNI.Text;
-            empleado_seleccionado.rol = cbRol.SelectedItem.ToString();
-            
-            lista_auxiliar = lista_empleados.ToList();
+            if (lstEmpleados.SelectedItem != null)
+            {
+                empleado_seleccionado.nombre = txtbNombre.Text;
+                empleado_seleccionado.sueldo = Convert.ToInt32(txtbSueldo.Text);
+                empleado_seleccionado.anio_fin_contrato = Convert.ToInt32(txtbExpContr.Text);
+                empleado_seleccionado.DNI = txtbDNI.Text;
+                empleado_seleccionado.rol = cbRol.SelectedItem.ToString();
 
-            lstEmpleados.ItemsSource = null;
-            lstEmpleados.ItemsSource = lista_auxiliar;
 
-            txtbNombre.Text = empleado_seleccionado.nombre;
-            txtbSueldo.Text = empleado_seleccionado.sueldo.ToString();
-            txtbExpContr.Text = empleado_seleccionado.anio_fin_contrato.ToString();
-            txtbDNI.Text = empleado_seleccionado.DNI;
-            cbRol.SelectedItem = empleado_seleccionado.rol.ToString();
-            
-           
-            btnEliminar.IsEnabled = false;
-            btnMod.IsEnabled=false;
-            txtbNombre.IsEnabled = true;
-            txtbSueldo.IsEnabled = true;
-            txtbExpContr.IsEnabled = true;
-            cbRol.IsEnabled = true;
-            btnGuardar.Visibility = Visibility.Visible;
-            btnDescartar.Visibility = Visibility.Visible;
+                lista_auxiliar = lista_empleados.ToList();
+
+                lstEmpleados.ItemsSource = null;
+                lstEmpleados.ItemsSource = lista_auxiliar;
+
+                txtbNombre.Text = empleado_seleccionado.nombre;
+                txtbSueldo.Text = empleado_seleccionado.sueldo.ToString();
+                txtbExpContr.Text = empleado_seleccionado.anio_fin_contrato.ToString();
+                txtbDNI.Text = empleado_seleccionado.DNI;
+                cbRol.SelectedItem = empleado_seleccionado.rol.ToString();
+
+
+                btnEliminar.IsEnabled = false;
+                btnMod.IsEnabled = false;
+                txtbNombre.IsEnabled = true;
+                txtbSueldo.IsEnabled = true;
+                txtbExpContr.IsEnabled = true;
+                cbRol.IsEnabled = true;
+                btnGuardar.Visibility = Visibility.Visible;
+                btnDescartar.Visibility = Visibility.Visible;
+            }
+
         }
 
         private void btnEliminar_Click(object sender, RoutedEventArgs e)
         {
             if (lstEmpleados.SelectedItem != null)
             {
-                MessageBoxResult resultado = MessageBox.Show("¿Estas seguro de que quieres eliminar el empleado seleccionado?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Information);
+                MessageBoxResult resultado = MessageBox.Show("¿Estás seguro de que quieres eliminar el empleado seleccionado?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Information);
                 if (resultado == MessageBoxResult.Yes)
                 {
                     Empleado empleado_seleccionado = (Empleado)lstEmpleados.SelectedItem;
@@ -173,6 +182,7 @@ namespace AplicaciónFisioterapia
                 txtbNombre.IsEnabled = false;               
                 txtbSueldo.IsEnabled = false;         
                 cbRol.IsEnabled = false;
+                
 
                 lista_empleados[indice_empleado_seleccionado] 
                     = new Empleado(txtbNombre.Text,txtbDNI.Text,
@@ -187,6 +197,96 @@ namespace AplicaciónFisioterapia
                 btnGuardar.Visibility = Visibility.Hidden;
                 MessageBox.Show("Usuario modificado con éxito","Modificación exitosa",MessageBoxButton.OK,MessageBoxImage.None);
 
+            }
+        }
+
+        private Boolean campos_completos()
+        {
+            if (txtbDNI.Text != String.Empty && txtbNombre.Text != String.Empty
+                && txtbSueldo.Text != String.Empty && txtbExpContr.Text != String.Empty
+                && cbRol.SelectedItem != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private Boolean ComprobarEntradaEntero(TextBox txtb)
+        {
+            Boolean valido = false;
+            if (int.TryParse(txtb.Text, out int numero) && numero > 0)
+            {
+                // borde y background en verde
+                txtb.BorderBrush = Brushes.Green;
+                txtb.Background = Brushes.LightGreen;
+                valido = true;
+            }
+            else
+            {
+                // marcamos borde en rojo
+                txtb.BorderBrush = Brushes.Red;
+                txtb.Background = Brushes.LightCoral; ;
+                valido = false;
+            }
+            return valido;
+        }
+
+        private Boolean ComprobarEntradaEnteroAnio(TextBox txtb)
+        {
+            Boolean valido = false;
+            if (int.TryParse(txtb.Text, out int numero) && numero > 0 && txtb.Text.Length == 4)
+            {
+                // borde y background en verde
+                txtb.BorderBrush = Brushes.Green;
+                txtb.Background = Brushes.LightGreen;
+                valido = true;
+            }
+            else
+            {
+                // marcamos borde en rojo
+                txtb.BorderBrush = Brushes.Red;
+                txtb.Background = Brushes.LightCoral; ;
+                valido = false;
+            }
+            return valido;
+        }
+
+        private void txtbNombre_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (campos_completos())
+            {
+                btnGuardar.IsEnabled = true;
+            }
+            else
+            {
+                btnGuardar.IsEnabled=false;
+            }
+        }
+
+        private void txtbSueldo_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (ComprobarEntradaEntero(txtbSueldo) && campos_completos())
+            {
+                btnGuardar.IsEnabled = true;
+            }
+            else
+            {
+                btnGuardar.IsEnabled = false;
+            }
+        }
+
+        private void txtbExpContr_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (ComprobarEntradaEnteroAnio(txtbExpContr) && campos_completos())
+            {
+                btnGuardar.IsEnabled = true;
+            }
+            else
+            {
+                btnGuardar.IsEnabled = false;
             }
         }
     }

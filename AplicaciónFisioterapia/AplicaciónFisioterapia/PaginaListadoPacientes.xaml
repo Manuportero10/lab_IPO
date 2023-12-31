@@ -19,6 +19,8 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
+                        <Image 
+                         Width="32" Height="37" Source="{Binding icono_paciente}"></Image>
                         <TextBlock Text="{Binding Name}" VerticalAlignment="Center">
                         </TextBlock>
                     </StackPanel>
@@ -50,20 +52,48 @@
             <Label FontWeight="Bold">Edad:</Label>
             <TextBox x:Name="txtbEdad" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left"
                        Text= "{Binding ElementName=lstPacientes, Path=SelectedItem.edad}"
-                       IsEnabled="False">
+                       IsEnabled="False"
+                       KeyUp="txtbEdad_KeyUp"
+                       TextChanged="txtbEdad_TextChanged">
+                       
             </TextBox>
 
             <Label FontWeight="Bold">Número de tarjeta sanitaria:</Label>
             <TextBox x:Name="txtbTarjeta" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left"
                        Text= "{Binding ElementName=lstPacientes, Path=SelectedItem.tarjeta}"
-                       IsEnabled="False">
+                       IsEnabled="False"
+                        KeyUp="txtbTarjeta_KeyUp"
+                        TextChanged="txtbTarjeta_TextChanged">
             </TextBox>
         </StackPanel>
 
-        <Button x:Name="btnMod_pac" Grid.Column="2" Content="modificar" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,-100,0,0" Visibility="Hidden" Click="btnMod_pac_Click"/>
-        <Button x:Name="btnEliminar_pac" Grid.Column="2" Content="eliminar" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,-50,0,0" Visibility="Hidden" Click="btnEliminar_pac_Click" />
-        <Button x:Name="btnGuardar_pac" Grid.Column="2" Content="guardar cambios" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Visibility="Hidden" Click="btnGuardar_pac_Click"/>
-        <Button x:Name="btnDescartar_pac" Grid.Column="2" Content="descartar cambios" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,50,0,0" Visibility="Hidden" Click="btnDescartar_pac_Click"/>
+        <Button x:Name="btnMod_pac" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,-100,0,0" Visibility="Hidden" Click="btnMod_pac_Click">
+            <StackPanel Orientation="Horizontal" Width="77">
+                <Image Source="img/editar.png" Width="20" Height="20" Margin="0,0,5,0"/>
+                <TextBlock Text="Modificar" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btnEliminar_pac" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,-50,0,0" Visibility="Hidden" Click="btnEliminar_pac_Click">
+            <StackPanel Orientation="Horizontal" Width="77">
+                <Image Source="img/eliminar.png" Width="20" Height="20" Margin="0,0,5,0"/>
+                <TextBlock Text="Eliminar" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btnGuardar_pac" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Visibility="Hidden" Click="btnGuardar_pac_Click">
+            <StackPanel Orientation="Horizontal" Width="77">
+                <Image Source="img/guardar.png" Width="20" Height="20" Margin="0,0,5,0"/>
+                <TextBlock Text="Guardar" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="btnDescartar_pac" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,50,0,0" Visibility="Hidden" Click="btnDescartar_pac_Click">
+            <StackPanel Orientation="Horizontal" Width="77">
+                <Image Source="img/descartar.png" Width="20" Height="20" Margin="0,0,5,0"/>
+                <TextBlock Text="Descartar" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
 
     </Grid>
 </Page>

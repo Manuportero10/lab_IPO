@@ -38,7 +38,7 @@ namespace AplicaciónFisioterapia
 
         private void MainWindow_closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            MessageBoxResult resultado = MessageBox.Show("¿Estas seguro de que quieres cerrar la aplicación?", "Cierre de aplicación", MessageBoxButton.YesNo, MessageBoxImage.Information);
+            MessageBoxResult resultado = MessageBox.Show("¿Estás seguro de que quieres cerrar la aplicación?", "Cierre de aplicación", MessageBoxButton.YesNo, MessageBoxImage.Information);
             if (resultado == MessageBoxResult.No)
             {
                 e.Cancel = true;
