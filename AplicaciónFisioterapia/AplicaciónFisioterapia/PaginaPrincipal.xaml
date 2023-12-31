@@ -9,7 +9,7 @@
       Title="PaginaPrincipal">
     <Grid>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"  
-                   Text="Para acceder a información detallada de la aplicación, eliga el apartado y navege entre las opciones." 
+                   Text="Para acceder a información detallada de la aplicación, elija el apartado y navegue entre las opciones." 
                    FontSize="15" FontWeight="Bold"/>
 
     </Grid>
