@@ -165,7 +165,7 @@ namespace AplicaciónFisioterapia
         {
             if (lstCitas.SelectedItem != null)
             {
-                MessageBoxResult resultado = MessageBox.Show("¿Estás seguro de que quieres eliminar el empleado seleccionado?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Information);
+                MessageBoxResult resultado = MessageBox.Show("¿Estás seguro de que quieres eliminar la cita seleccionada?", "Confirmación", MessageBoxButton.YesNo, MessageBoxImage.Information);
                 if (resultado == MessageBoxResult.Yes)
                 {
                     Cita cita_seleccionada = (Cita)lstCitas.SelectedItem;

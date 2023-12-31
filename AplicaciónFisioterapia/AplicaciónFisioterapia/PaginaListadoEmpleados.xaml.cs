@@ -195,7 +195,7 @@ namespace AplicaciónFisioterapia
                 btnEliminar.IsEnabled = true;
                 btnDescartar.Visibility = Visibility.Hidden;
                 btnGuardar.Visibility = Visibility.Hidden;
-                MessageBox.Show("Usuario modificado con éxito","Modificación exitosa",MessageBoxButton.OK,MessageBoxImage.None);
+                MessageBox.Show("Empleado modificado con éxito","Modificación exitosa",MessageBoxButton.OK,MessageBoxImage.None);
 
             }
         }

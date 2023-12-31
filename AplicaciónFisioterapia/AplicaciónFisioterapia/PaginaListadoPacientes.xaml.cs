@@ -170,7 +170,7 @@ namespace AplicaciónFisioterapia
                 btnEliminar_pac.IsEnabled = true;
                 btnDescartar_pac.Visibility = Visibility.Hidden;
                 btnGuardar_pac.Visibility = Visibility.Hidden;
-                MessageBox.Show("Usuario modificado con éxito", "Modificación exitosa", MessageBoxButton.OK, MessageBoxImage.None);
+                MessageBox.Show("Paciente modificado con éxito", "Modificación exitosa", MessageBoxButton.OK, MessageBoxImage.None);
 
             }
         }
