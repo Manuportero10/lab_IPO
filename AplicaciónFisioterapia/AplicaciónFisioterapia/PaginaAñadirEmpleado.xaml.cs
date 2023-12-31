@@ -34,61 +34,14 @@ namespace AplicaciónFisioterapia
         {
             if (txtbDNI_emp.Text != String.Empty && txtbNombre_emp.Text != String.Empty
                 && txtbSueldo_emp.Text != String.Empty && txtExpir_emp.Text != String.Empty
-                && cbRol_emp.SelectedItem != null)
+                && cbRol_emp.SelectedItem != null && ComprobarEntradaDNI(txtbDNI_emp) &&
+                ComprobarEntradaEntero(txtbSueldo_emp) && ComprobarEntradaEnteroAnio(txtExpir_emp))
             {
                 return true;
             }
             else
             {
                 return false;
-            }
-        }
-
-        private void txtbNombre_emp_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (campos_completos())
-            {
-                btn_alta.IsEnabled = true;
-            }
-            else
-            {
-                btn_alta.IsEnabled = false;
-            }
-        }
-
-        private void txtbDNI_emp_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (campos_completos())
-            {
-                btn_alta.IsEnabled = true;
-            }
-            else
-            {
-                btn_alta.IsEnabled = false;
-            }
-        }
-
-        private void txtbSueldo_emp_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (campos_completos())
-            {
-                btn_alta.IsEnabled = true;
-            }
-            else
-            {
-                btn_alta.IsEnabled = false;
-            }
-        }
-
-        private void txtExpir_emp_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (campos_completos())
-            {
-                btn_alta.IsEnabled = true;
-            }
-            else
-            {
-                btn_alta.IsEnabled = false;
             }
         }
 

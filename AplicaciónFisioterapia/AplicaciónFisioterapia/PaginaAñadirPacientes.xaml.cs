@@ -29,7 +29,8 @@ namespace AplicaciónFisioterapia
         private Boolean campos_completos()
         {
             if (txtbDNI.Text != String.Empty && txtbNombre.Text != String.Empty
-                && txtbEdad.Text != String.Empty && txtbTarjeta.Text != String.Empty)
+                && txtbEdad.Text != String.Empty && txtbTarjeta.Text != String.Empty 
+                && ComprobarEntradaDNI(txtbDNI))
             {
                 return true;
             }
